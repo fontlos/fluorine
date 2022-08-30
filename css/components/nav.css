@@ -1,0 +1,255 @@
+@font-face {
+    font-family: "ChopinScript";
+    src: url(../../font/ChopinScript.otf);
+}
+
+#main nav {
+    width: 110px;
+    height: 700px;
+    transform: translateY(-50%);
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    z-index: 20;
+}
+
+#main nav .nav {
+    width: 100%;
+    height: 100%;
+    background: var(--nav-background);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+    /* z-index: 20; */
+}
+
+/* #main nav .nav {
+    width: 110px;
+    height: 700px;
+    background: var(--nav-background);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+    transform: translateY(-50%);
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    z-index: 20;
+} */
+
+/* 最上图标等 */
+#main nav .logo {
+    width: 250px;
+    height: 60px;
+    margin-left: 25px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 4fr 7fr;
+}
+
+/* 图标包装器 */
+#main nav .logo-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid var(--nav-cricle);
+    overflow: hidden;
+}
+
+/* logo图片 */
+#main nav .logo-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#main nav .logo-title {
+    height: 60px
+}
+
+/* logo图片旁文字 */
+#main nav .logo-title p {
+    color: var(--nav-font);
+    font-family: "ChopinScript" !important;
+    font-size: 25px;
+}
+
+#main nav .logo-title h2 {
+    color: var(--nav-font);
+    font-weight: 400
+}
+
+/* 分界线 */
+#main nav .line {
+    height: 1px;
+    width: 60px;
+    background: var(--nav-line);
+    margin: 20px 25px;
+    transition: 0.5s;
+}
+
+/* 按钮菜单栏 */
+#main nav .menu {
+    width: 60px;
+    margin-left: 25px;
+}
+
+#main nav .item {
+    display: grid;
+    grid-template-columns: 60px auto 60px;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 6px;
+    width: 60px;
+}
+
+#main nav .item:hover {
+    background: var(--nav-hover);
+}
+
+/* 左方主图标 */
+#main nav .left-icon {
+    width: 60px;
+    height: 50px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+/* 中间按钮内容 */
+#main nav .lable {
+    width: 0;
+    height: 50px;
+    color: var(--nav-font);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    transition: 0.5s;
+    overflow: hidden;
+    position: relative;
+    left: -20px;
+    opacity: 0;
+}
+
+/* 右方副图标 */
+#main nav .right-icon {
+    width: 0;
+    height: 50px;
+    transition: 0.5s;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+    opacity: 0;
+}
+
+/* 图标大小及颜色 */
+#main nav .iconfont {
+    font-size: 26px;
+    color: var(--nav-font);
+}
+
+/* 特定图标设置 */
+#main nav .right-icon .iconfont {
+    font-size: 20px;
+    color: var(--nav-font);
+}
+
+/* 最左侧光条 */
+#main nav .light-line {
+    width: 6px;
+    height: 50px;
+    background: var(--nav-light-line);
+    position: absolute;
+    left: -25px;
+    transition: 0.5s;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    opacity: 0;
+}
+
+#main nav .item:hover .light-line {
+    opacity: 1;
+}
+
+/* 只在大屏上触发的侧边栏展开 */
+@media (min-width: 1000px) {
+    #main nav:hover {
+        width: 250px;
+    }
+
+    #main nav:hover .line {
+        width: 200px;
+    }
+
+    #main nav .menu:hover {
+        width: 200px;
+        margin-left: 25px
+    }
+
+    #main nav:hover .item {
+        width: auto;
+    }
+
+    #main nav:hover .lable {
+        width: 90px;
+        opacity: 1;
+    }
+
+    #main nav:hover .right-icon {
+        width: 60px;
+        opacity: 1;
+    }
+}
+
+/* 默认大小1200像素 当小于1000时 */
+/* @media (min-width: 750px) and (max-width: 1000px) {
+    #main nav {
+        border-radius: 0;
+        height: 100%;
+        left: 0px;
+        border-right: 1px solid var(--icon-line);
+        width: 109px;
+    }
+
+    #main nav .item {
+        background: var(--element-background);
+    }
+} */
+
+/* 窗口小于750的布局 最小大小为500 */
+/* @media (max-width: 750px) {
+    #main nav {
+        border-radius: 0;
+        width: 250px;
+        height: 100%;
+        left: -250px;
+    }
+
+    #main nav.unfold{
+        left: 0px;
+    }
+
+    #main nav .line {
+        width: 200px;
+    }
+
+    #main nav .menu {
+        width: 200px;
+    }
+
+    #main nav .item {
+        width: auto;
+    }
+
+    #main nav .lable {
+        width: 70px;
+        opacity: 1;
+    }
+
+    #main nav .right-icon {
+        width: 60px;
+        opacity: 1;
+    }
+} */

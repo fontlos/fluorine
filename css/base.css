@@ -1,0 +1,46 @@
+/* 页面通用，格式化常用标签 */
+html,
+head,
+body,
+header,
+aside,
+nav,
+main,
+footer,
+button,
+div,
+h1,
+h2,
+h3,
+h4,
+a,
+img,
+span,
+p {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+a {
+    text-decoration: none
+}
+
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
