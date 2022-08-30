@@ -15,3 +15,7 @@ mod loading;
 pub use loading::loading1;
 
 mod cards;
+pub use cards::card;
+
+mod search;
+pub use search::search;

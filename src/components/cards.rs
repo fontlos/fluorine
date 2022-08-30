@@ -1,15 +1,14 @@
 use dioxus::prelude::*;
 
 #[derive(Props)]
-struct CardProps<'a>{
+pub struct CardProps<'a>{
     title:&'a str,
     subtitle:&'a str,
     link:&'a str,
     //tag:&'a str,
 }
 
-#[allow(non_snake_case)]
-fn Card<'a>(cx:Scope<'a,CardProps<'a>>)->Element{
+pub fn card<'a>(cx:Scope<'a,CardProps<'a>>)->Element{
     rsx!(cx,
         div{
             class:"card",

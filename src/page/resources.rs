@@ -33,7 +33,7 @@ pub fn resources(cx: Scope) -> Element{
     }
 }
 
-fn resources_page(cx: Scope) -> Element{
+pub fn resources_page(cx: Scope) -> Element{
     let res =match use_route(&cx).segment("res"){
         Some(res)=>res,
         None=>"",

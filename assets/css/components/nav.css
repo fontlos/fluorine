@@ -41,7 +41,7 @@
 #main nav .logo {
     width: 250px;
     height: 60px;
-    margin-left: 25px;
+    margin-left: 20px;
     margin-top: 20px;
     display: grid;
     grid-template-columns: 4fr 7fr;
@@ -202,54 +202,3 @@
         opacity: 1;
     }
 }
-
-/* 默认大小1200像素 当小于1000时 */
-/* @media (min-width: 750px) and (max-width: 1000px) {
-    #main nav {
-        border-radius: 0;
-        height: 100%;
-        left: 0px;
-        border-right: 1px solid var(--icon-line);
-        width: 109px;
-    }
-
-    #main nav .item {
-        background: var(--element-background);
-    }
-} */
-
-/* 窗口小于750的布局 最小大小为500 */
-/* @media (max-width: 750px) {
-    #main nav {
-        border-radius: 0;
-        width: 250px;
-        height: 100%;
-        left: -250px;
-    }
-
-    #main nav.unfold{
-        left: 0px;
-    }
-
-    #main nav .line {
-        width: 200px;
-    }
-
-    #main nav .menu {
-        width: 200px;
-    }
-
-    #main nav .item {
-        width: auto;
-    }
-
-    #main nav .lable {
-        width: 70px;
-        opacity: 1;
-    }
-
-    #main nav .right-icon {
-        width: 60px;
-        opacity: 1;
-    }
-} */

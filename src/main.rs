@@ -26,7 +26,7 @@ fn app(cx: Scope) -> Element {
             // }
             Route{
                 to: "/resources/:res/:title",
-                page::resources{}
+                page::resources_page{}
             }
             Route{
                 to: "/blog",

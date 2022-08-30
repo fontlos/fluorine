@@ -25,10 +25,44 @@ pub fn home(cx: Scope) -> Element{
         components::header{}
         components::nav{}
         main{
-            "home"
+            Cards{}
         }
         components::footer{}
         //components::loading1{}
         div{id:"snow"}
+    }
+}
+
+#[allow(non_snake_case)]
+fn Cards(cx: Scope) -> Element {
+    rsx! {
+        cx,
+        link{
+            rel: "stylesheet",
+            href: "./css/page/card.css"
+        }
+        div{
+            class:"cards",
+            components::card{
+                title:"Card one",
+                subtitle:"something",
+                link:""
+            }
+            components::card{
+                title:"Card two",
+                subtitle:"something",
+                link:""
+            }
+            components::card{
+                title:"Card three",
+                subtitle:"something",
+                link:""
+            }
+            components::card{
+                title:"Card four",
+                subtitle:"something",
+                link:""
+            }
+        }
     }
 }
