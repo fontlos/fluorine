@@ -23,9 +23,17 @@ p {
     user-select: none;
 }
 
+html, body {
+    scroll-behavior: smooth;
+}
+
 button {
     border: none;
     background: transparent;
+}
+
+img {
+    border: none;
 }
 
 input {
