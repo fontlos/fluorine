@@ -1,0 +1,83 @@
+/* 各个主页通用布局 */
+@font-face {
+    font-family: Harmony;
+    src: url(../font/HT.ttf)
+}
+
+:root {
+    --background-color: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    --nav-background:rgba(0, 0, 0, 0.8);
+    --nav-font:rgba(255, 255, 255, 0.6);
+    --nav-cricle:rgba(255, 255, 255, 0.3);
+    --nav-line:rgba(245, 255, 255, 0.5);
+    --nav-light-line:#68f5ff;
+    --nav-hover:rgba(255, 255, 255, 0.1);
+    /* --button-hover: rgba(255, 255, 255, 0.5);
+    --icon-line: rgba(0, 0, 0, 0.5);
+    --nav-logo-cricle: rgba(128, 128, 128, 0.4);
+    --nav-logo-title: rgba(0, 0, 0, 0.6);
+    --nav-item-hover: rgba(196, 196, 196, 0.8);
+    --nav-light-line: rgba(0, 0, 0, 0.8);
+    --scrollbar: rgba(100, 100, 100, 0.6);
+    --scrollbar-hover: rgba(60, 60, 60, 0.6); */
+}
+
+body {
+    background: url(https://fangtaluosi.top/img/background/basebg.jpg) no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+
+button,
+div,
+p {
+    font-family: "Harmony" !important;
+}
+
+#main {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 250px 4fr 200px;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background: white
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #63b8fa);
+    border-radius: 6px
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #f1e252)
+}
