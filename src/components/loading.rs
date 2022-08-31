@@ -22,7 +22,7 @@ pub fn loading1(cx: Scope) -> Element {
     rsx! {cx,
         link{
             rel: "stylesheet",
-            href: "./css/components/loading-1.css"
+            href: "https://fangtaluosi.top/css/components/loading-1.css"
         }
         div{
             class:"loading",

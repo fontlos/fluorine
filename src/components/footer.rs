@@ -4,7 +4,7 @@ pub fn footer(cx: Scope) -> Element {
     rsx! {cx,
         link{
             rel: "stylesheet",
-            href: "./css/components/footer.css"
+            href: "https://fangtaluosi.top/css/components/footer.css"
         }
         script{src:"https://fangtaluosi.top/js/fish.js"}
         footer{

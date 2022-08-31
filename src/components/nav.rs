@@ -5,11 +5,11 @@ pub fn nav(cx: Scope) -> Element {
         nav{
             link{
                 rel: "stylesheet",
-                href: "./css/components/nav.css"
+                href: "https://fangtaluosi.top/css/components/nav.css"
             }
             link{
                 rel: "stylesheet",
-                href: "./css/icon/iconfont.css"
+                href: "https://fangtaluosi.top/css/icon/iconfont.css"
             }
             div{
                 class:"nav",
@@ -18,7 +18,8 @@ pub fn nav(cx: Scope) -> Element {
                     div{
                         class:"logo-icon",
                         img{
-                            src:"https://fangtaluosi.top/img/icon/logo-bg.png"
+                            src:"https://fangtaluosi.top/img/icon/logo-bg.png",
+                            alt:"logo"
                         }
                     }
                     div{
@@ -29,7 +30,11 @@ pub fn nav(cx: Scope) -> Element {
                 }
                 div{class:"line"}
                 div{
-                    class:"menu",
+                    class:"title",
+                    p{"Page"}
+                }
+                div{
+                    class:"page",
                     NavButton{
                         left_icon:"icon-home_light",
                         lable:"Home",
@@ -54,8 +59,29 @@ pub fn nav(cx: Scope) -> Element {
                         right_icon:"",
                         link:"/",
                     }
+                    NavButton{
+                        left_icon:"icon-tag",
+                        lable:"Tag",
+                        right_icon:"",
+                        link:"/",
+                    }
                 }
                 div{class:"line"}
+                div{
+                    class:"title",
+                    p{"Serve"}
+                }
+                div{
+                    class:"serve",
+                    NavButton{
+                        left_icon:"icon-link",
+                        lable:"Contact",
+                        right_icon:"",
+                        link:"/",
+                    }
+                    Music{}
+                    ToTop{}
+                }
             }
         }
     }
@@ -71,7 +97,7 @@ struct NavButtonProps<'a>{
 
 #[allow(non_snake_case)]
 fn NavButton<'a>(cx:Scope<'a,NavButtonProps<'a>>)->Element{
-    cx.render(rsx!(
+    rsx!{cx,
         Link{
             to:"{cx.props.link}",
             class:"item",
@@ -89,5 +115,51 @@ fn NavButton<'a>(cx:Scope<'a,NavButtonProps<'a>>)->Element{
                 span{class:"iconfont {cx.props.right_icon}"}
             }
         }
-    ))
+    }
+}
+
+#[allow(non_snake_case)]
+fn Music<'a>(cx:Scope)->Element{
+    rsx!{cx,
+        div{
+            class:"item",
+            div{class:"light-line"}
+            div{
+                class:"left-icon",
+                span{class:"iconfont icon-yinle"}
+            }
+            div{
+                class:"lable",
+                "Music"
+            }
+            div{
+                class:"right-icon",
+                span{class:"iconfont "}
+            }
+        }
+    }
+}
+
+#[allow(non_snake_case)]
+fn ToTop<'a>(cx:Scope)->Element{
+    rsx!{cx,
+        a{
+            href:"#",
+            id:"to-top",
+            class:"item",
+            div{class:"light-line"}
+            div{
+                class:"left-icon",
+                span{class:"iconfont icon-xiangshang"}
+            }
+            div{
+                class:"lable",
+                "ToTop"
+            }
+            div{
+                class:"right-icon",
+                span{class:"iconfont "}
+            }
+        }
+    }
 }

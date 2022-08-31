@@ -13,11 +13,11 @@ pub fn home(cx: Scope) -> Element{
         }
         link{
             rel: "stylesheet",
-            href: "./css/base.css"
+            href: "https://fangtaluosi.top/css/base.css"
         }
         link{
             rel: "stylesheet",
-            href: "./css/index.css"
+            href: "https://fangtaluosi.top/css/index.css"
         }
         script{src:"https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"}
         script{src:"https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"}
@@ -39,7 +39,7 @@ fn Cards(cx: Scope) -> Element {
         cx,
         link{
             rel: "stylesheet",
-            href: "./css/page/card.css"
+            href: "https://fangtaluosi.top/css/page/card.css"
         }
         div{
             class:"cards",

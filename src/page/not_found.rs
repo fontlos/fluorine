@@ -23,7 +23,7 @@ pub fn not_found(cx: Scope) -> Element {
         }
         link{
             rel: "stylesheet",
-            href: "./css/404.css"
+            href: "https://fangtaluosi.top/css/404.css"
         }
         main{
             class: "wrapper",

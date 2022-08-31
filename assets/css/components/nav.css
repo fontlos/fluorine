@@ -4,44 +4,30 @@
 }
 
 #main nav {
-    width: 110px;
-    height: 700px;
     transform: translateY(-50%);
     position: fixed;
     top: 50%;
     left: 20px;
     z-index: 20;
+    pointer-events: none
 }
 
 #main nav .nav {
-    width: 100%;
-    height: 100%;
-    background: var(--nav-background);
-    border-radius: 20px;
-    overflow: hidden;
-    transition: 0.5s;
-    /* z-index: 20; */
-}
-
-/* #main nav .nav {
     width: 110px;
     height: 700px;
     background: var(--nav-background);
     border-radius: 20px;
     overflow: hidden;
     transition: 0.5s;
-    transform: translateY(-50%);
-    position: fixed;
-    top: 50%;
-    left: 20px;
-    z-index: 20;
-} */
+    pointer-events: all;
+    /* z-index: 20; */
+}
 
 /* 最上图标等 */
 #main nav .logo {
     width: 250px;
     height: 60px;
-    margin-left: 20px;
+    margin-left: 25px;
     margin-top: 20px;
     display: grid;
     grid-template-columns: 4fr 7fr;
@@ -51,6 +37,8 @@
 #main nav .logo-icon {
     width: 60px;
     height: 60px;
+    /* 防止border撑大盒子 */
+    box-sizing: border-box;
     border-radius: 50%;
     border: 4px solid var(--nav-cricle);
     overflow: hidden;
@@ -89,10 +77,29 @@
     transition: 0.5s;
 }
 
+#main nav .title {
+    width: 60px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+#main nav .title p {
+    color: var(--nav-font);
+    font-size: 14px;
+}
+
 /* 按钮菜单栏 */
-#main nav .menu {
+#main nav .page {
     width: 60px;
     margin-left: 25px;
+}
+
+#main nav .serve{
+    width: 60px;
+    margin-left: 25px;
+    border-radius:10px;
+    background: rgba(0, 0, 0, 0.7);
+    transition: 0.5s;
 }
 
 #main nav .item {
@@ -175,29 +182,32 @@
 
 /* 只在大屏上触发的侧边栏展开 */
 @media (min-width: 1000px) {
-    #main nav:hover {
+    #main .nav:hover {
         width: 250px;
     }
 
-    #main nav:hover .line {
+    #main .nav:hover .line {
         width: 200px;
     }
 
-    #main nav .menu:hover {
+    #main .nav:hover .page {
         width: 200px;
-        margin-left: 25px
     }
 
-    #main nav:hover .item {
+    #main .nav:hover .serve {
+        width: 230px;
+    }
+
+    #main .nav:hover .item {
         width: auto;
     }
 
-    #main nav:hover .lable {
+    #main .nav:hover .lable {
         width: 90px;
         opacity: 1;
     }
 
-    #main nav:hover .right-icon {
+    #main .nav:hover .right-icon {
         width: 60px;
         opacity: 1;
     }

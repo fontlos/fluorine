@@ -5,7 +5,7 @@ pub fn header(cx: Scope) -> Element {
         header{
             link{
                 rel: "stylesheet",
-                href: "./css/page/search.css"
+                href: "https://fangtaluosi.top/css/page/search.css"
             }
             super::search{}
         }
